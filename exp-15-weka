@@ -1,0 +1,60 @@
+== Run information ===
+
+Scheme:weka.classifiers.trees.BFTree -S 1 -M 2 -N 5 -C 1.0 -P POSTPRUNED
+Relation:     iris
+Instances:    150
+Attributes:   5
+              sepallength
+              sepalwidth
+              petallength
+              petalwidth
+              class
+Test mode:evaluate on training data
+
+=== Classifier model (full training set) ===
+
+Best-First Decision Tree
+
+petallength < 2.45: Iris-setosa(50.0/0.0)
+petallength >= 2.45
+|  petalwidth < 1.75
+|  |  petallength < 4.95: Iris-versicolor(47.0/1.0)
+|  |  petallength >= 4.95
+|  |  |  petalwidth < 1.55: Iris-virginica(3.0/0.0)
+|  |  |  petalwidth >= 1.55: Iris-versicolor(2.0/1.0)
+|  petalwidth >= 1.75
+|  |  petallength < 4.85: Iris-virginica(2.0/1.0)
+|  |  petallength >= 4.85: Iris-virginica(43.0/0.0)
+
+Size of the Tree: 11
+
+Number of Leaf Nodes: 6
+
+Time taken to build model: 0.01 seconds
+
+=== Evaluation on training set ===
+=== Summary ===
+
+Correctly Classified Instances         147               98      %
+Incorrectly Classified Instances         3                2      %
+Kappa statistic                          0.97  
+Mean absolute error                      0.0206
+Root mean squared error                  0.1014
+Relative absolute error                  4.625  %
+Root relative squared error             21.5058 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         0          1         1         1          1        Iris-setosa
+                 0.98      0.02       0.961     0.98      0.97       0.994    Iris-versicolor
+                 0.96      0.01       0.98      0.96      0.97       0.994    Iris-virginica
+Weighted Avg.    0.98      0.01       0.98      0.98      0.98       0.996
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 49  1 |  b = Iris-versicolor
+  0  2 48 |  c = Iris-virginica
