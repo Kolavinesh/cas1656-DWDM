@@ -1,0 +1,79 @@
+=== Run information ===
+
+Scheme:weka.clusterers.MakeDensityBasedClusterer -M 1.0E-6 -W weka.clusterers.SimpleKMeans -- -N 2 -A "weka.core.EuclideanDistance -R first-last" -I 500 -S 10
+Relation:     iris
+Instances:    150
+Attributes:   5
+              sepallength
+              sepalwidth
+              petallength
+              petalwidth
+              class
+Test mode:evaluate on training data
+
+=== Model and evaluation on training set ===
+
+MakeDensityBasedClusterer: 
+
+Wrapped clusterer: 
+kMeans
+======
+
+Number of iterations: 7
+Within cluster sum of squared errors: 62.1436882815797
+Missing values globally replaced with mean/mode
+
+Cluster centroids:
+                                          Cluster#
+Attribute                Full Data               0               1
+                             (150)           (100)            (50)
+==================================================================
+sepallength                 5.8433           6.262           5.006
+sepalwidth                   3.054           2.872           3.418
+petallength                 3.7587           4.906           1.464
+petalwidth                  1.1987           1.676           0.244
+class                  Iris-setosa Iris-versicolor     Iris-setosa
+
+
+
+Fitted estimators (with ML estimates of variance):
+
+Cluster: 0 Prior probability: 0.6645
+
+Attribute: sepallength
+Normal Distribution. Mean = 6.262 StdDev = 0.6595
+Attribute: sepalwidth
+Normal Distribution. Mean = 2.872 StdDev = 0.3311
+Attribute: petallength
+Normal Distribution. Mean = 4.906 StdDev = 0.8214
+Attribute: petalwidth
+Normal Distribution. Mean = 1.676 StdDev = 0.4226
+Attribute: class
+Discrete Estimator. Counts =  1 51 51  (Total = 103)
+
+Cluster: 1 Prior probability: 0.3355
+
+Attribute: sepallength
+Normal Distribution. Mean = 5.006 StdDev = 0.3489
+Attribute: sepalwidth
+Normal Distribution. Mean = 3.418 StdDev = 0.3772
+Attribute: petallength
+Normal Distribution. Mean = 1.464 StdDev = 0.1718
+Attribute: petalwidth
+Normal Distribution. Mean = 0.244 StdDev = 0.1061
+Attribute: class
+Discrete Estimator. Counts =  51 1 1  (Total = 53)
+
+
+Time taken to build model (full training data) : 0 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      100 ( 67%)
+1       50 ( 33%)
+
+
+Log likelihood: -3.06315
+
