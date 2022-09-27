@@ -1,0 +1,60 @@
+=== Run information ===
+
+Scheme:weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     iris
+Instances:    150
+Attributes:   5
+              sepallength
+              sepalwidth
+              petallength
+              petalwidth
+              class
+Test mode:evaluate on training data
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=5 #classindex=4
+Network structure (nodes followed by parents)
+sepallength(3): class 
+sepalwidth(3): class 
+petallength(3): class 
+petalwidth(3): class 
+class(3): 
+LogScore Bayes: -481.00632967833803
+LogScore BDeu: -525.3834868062277
+LogScore MDL: -536.5317339418378
+LogScore ENTROPY: -471.39347511858665
+LogScore AIC: -497.39347511858665
+
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on training set ===
+=== Summary ===
+
+Correctly Classified Instances         142               94.6667 %
+Incorrectly Classified Instances         8                5.3333 %
+Kappa statistic                          0.92  
+Mean absolute error                      0.0331
+Root mean squared error                  0.1545
+Relative absolute error                  7.4367 %
+Root relative squared error             32.7793 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         0          1         1         1          1        Iris-setosa
+                 0.9       0.03       0.938     0.9       0.918      0.986    Iris-versicolor
+                 0.94      0.05       0.904     0.94      0.922      0.986    Iris-virginica
+Weighted Avg.    0.947     0.027      0.947     0.947     0.947      0.991
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 50  0  0 |  a = Iris-setosa
+  0 45  5 |  b = Iris-versicolor
+  0  3 47 |  c = Iris-virginica
+
